@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="419.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bcs.csc311.tipcalculator.PrimaryController">
+   <center>
+      <AnchorPane prefHeight="550.0" prefWidth="447.0">
+         <children>
+            <Label layoutX="61.599998474121094" layoutY="20.0" text="Amount">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="amountTF" layoutX="182.0" layoutY="21.0" onKeyReleased="#getSelectedTipPercentage" />
+            <TextField fx:id="tipTF" layoutX="182.0" layoutY="219.0" />
+            <Label layoutX="85.0" layoutY="223.0" text="Tip">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="309.0" text="Total">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalTF" layoutX="182.0" layoutY="306.0" />
+            <RadioButton fx:id="rb1" layoutX="41.0" layoutY="104.0" mnemonicParsing="false" onAction="#getSelectedTipPercentage" text="15%">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tipPercentageGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb2" layoutX="181.0" layoutY="104.0" mnemonicParsing="false" onAction="#getSelectedTipPercentage" text="20%" toggleGroup="$tipPercentageGroup" />
+            <RadioButton fx:id="rb3" layoutX="317.0" layoutY="104.0" mnemonicParsing="false" onAction="#getSelectedTipPercentage" text="25%" toggleGroup="$tipPercentageGroup" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
+
